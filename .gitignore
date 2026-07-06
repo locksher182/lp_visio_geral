@@ -1,0 +1,6 @@
+# Local agent logs and caches
+.agents/
+.gemini/
+*.log
+*.pid
+*.mp4
