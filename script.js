@@ -241,4 +241,39 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1500);
         });
     }
+
+    // === 6. LIGHTBOX MODAL ===
+    const imageLightbox = document.getElementById("imageLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const solutionImg = document.querySelector(".solution-img");
+
+    if (imageLightbox && lightboxImage && lightboxClose && solutionImg) {
+        solutionImg.addEventListener("click", () => {
+            lightboxImage.src = solutionImg.src;
+            lightboxImage.alt = solutionImg.alt;
+            imageLightbox.classList.add("active");
+            imageLightbox.setAttribute("aria-hidden", "false");
+        });
+
+        const closeLightbox = () => {
+            imageLightbox.classList.remove("active");
+            imageLightbox.setAttribute("aria-hidden", "true");
+            setTimeout(() => { lightboxImage.src = ""; }, 300);
+        };
+
+        lightboxClose.addEventListener("click", closeLightbox);
+
+        imageLightbox.addEventListener("click", (e) => {
+            if (e.target === imageLightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && imageLightbox.classList.contains("active")) {
+                closeLightbox();
+            }
+        });
+    }
 });
