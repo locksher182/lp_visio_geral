@@ -427,6 +427,7 @@ section {
 .vsl-wrapper-box {
     width: 320px;
     max-width: 100%;
+    aspect-ratio: 9 / 16;
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
@@ -438,8 +439,8 @@ section {
 
 .vsl-player {
     width: 100%;
-    max-height: 65vh;
-    aspect-ratio: 9 / 16;
+    height: 100%;
+    object-fit: cover;
     display: block;
     border: none;
 }
@@ -777,6 +778,7 @@ section {
     position: relative;
     width: 320px;
     max-width: 100%;
+    aspect-ratio: 9 / 16;
     margin: 2.5rem auto 0 auto;
     border-radius: 12px;
     overflow: hidden;
@@ -787,8 +789,8 @@ section {
 
 .presentation-player {
     width: 100%;
-    max-height: 65vh;
-    aspect-ratio: 9 / 16;
+    height: 100%;
+    object-fit: cover;
     display: block;
     border: none;
 }
@@ -1239,8 +1241,17 @@ section {
 
     .vsl-wrapper-box,
     .video-container-box {
-        max-width: 100% !important;
+        max-width: 320px !important;
         width: 100% !important;
+        aspect-ratio: 9 / 16 !important;
+    }
+    
+    .vsl-player,
+    .presentation-player {
+        width: 100% !important;
+        height: 100% !important;
+        aspect-ratio: 9 / 16 !important;
+        object-fit: cover !important;
     }
     
     .hero-visual {
