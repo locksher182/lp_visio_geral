@@ -276,6 +276,21 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.key === "Escape" && imageLightbox.classList.contains("active")) {
                 closeLightbox();
             }
+        // === 6. HTML5 VIDEOS CLICK TO PLAY/PAUSE ===
+        const players = document.querySelectorAll(".vsl-player, .presentation-player");
+        players.forEach(player => {
+            player.addEventListener("click", (e) => {
+                const rect = player.getBoundingClientRect();
+                const clickY = e.clientY - rect.top;
+                // Só dispara o toggle se o clique for acima da barra de controles (top 85% do player)
+                if (clickY < rect.height * 0.85) {
+                    if (player.paused) {
+                        player.play();
+                    } else {
+                        player.pause();
+                    }
+                }
+            });
         });
     }
 });
