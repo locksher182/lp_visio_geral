@@ -450,7 +450,7 @@ section {
     width: 100%;
     aspect-ratio: 9 / 16;
     max-height: 65vh;
-    background-size: 237% 100%; /* Ajuste ótico para recortar as barras pretas laterais do hqdefault */
+    background-size: 237% auto; /* Ajuste ótico proporcional para recortar as barras pretas laterais sem distorcer */
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
