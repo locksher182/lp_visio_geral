@@ -273,6 +273,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.key === "Escape" && imageLightbox.classList.contains("active")) {
                 closeLightbox();
             }
+        });
+
         // === 6. HTML5 VIDEOS CLICK TO PLAY/PAUSE ===
         const players = document.querySelectorAll(".vsl-player, .presentation-player");
         players.forEach(player => {
