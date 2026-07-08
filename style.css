@@ -425,8 +425,8 @@ section {
 }
 
 .vsl-wrapper-box {
-    width: fit-content;
-    max-width: 320px;
+    width: 320px;
+    max-width: 100%;
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
@@ -763,8 +763,8 @@ section {
 
 .video-container-box {
     position: relative;
-    width: fit-content;
-    max-width: 320px;
+    width: 320px;
+    max-width: 100%;
     margin: 2.5rem auto 0 auto;
     border-radius: 12px;
     overflow: hidden;

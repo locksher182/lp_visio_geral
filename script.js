@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const videoId = facade.getAttribute("data-video-id");
         if (videoId) {
             // Define o thumbnail padrão de alta resolução do YouTube como background do container
-            facade.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/sddefault.jpg)`;
+            facade.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
             
             // Substitui a fachada estática pelo iframe do player real ao clicar
             facade.addEventListener("click", () => {
