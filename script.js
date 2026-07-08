@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Limpa o conteúdo da fachada (como o botão de play) e insere o iframe
                 facade.innerHTML = "";
                 facade.appendChild(iframe);
+
+                // Adiciona a máscara superior invisível para ocultar info do YouTube no hover
+                const mask = document.createElement("div");
+                mask.className = "iframe-mask-top";
+                facade.appendChild(mask);
             });
         }
     });

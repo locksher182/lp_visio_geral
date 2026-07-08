@@ -450,13 +450,25 @@ section {
     width: 100%;
     aspect-ratio: 9 / 16;
     max-height: 65vh;
-    background-size: cover;
+    background-size: 237% 100%; /* Ajuste ótico para recortar as barras pretas laterais do hqdefault */
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Máscara invisível para bloquear a ativação do título do YouTube no hover */
+.iframe-mask-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 5;
+    background: transparent;
+    pointer-events: auto;
 }
 
 .facade-play-btn {
