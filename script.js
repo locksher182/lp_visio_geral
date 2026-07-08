@@ -232,13 +232,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 formSubmitBtn.innerText = "Sucesso!";
                 
-                // Simulação do redirecionamento após 2.5 segundos
+                // Redirecionamento real após 2 segundos para a plataforma
                 setTimeout(() => {
-                    formFeedback.innerHTML = "<strong>Tudo Pronto!</strong> Se você não for redirecionado automaticamente, <a href='#' style='color: var(--white); text-decoration: underline; font-weight: 700;'>clique aqui para iniciar o teste</a>.";
-                    leadForm.reset();
-                    formSubmitBtn.disabled = false;
-                    formSubmitBtn.innerText = originalText;
-                }, 2500);
+                    window.location.href = "https://mapatalento.com.br/";
+                }, 2000);
                 
             }, 1500);
         });
