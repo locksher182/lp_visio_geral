@@ -439,8 +439,9 @@ section {
 .vsl-player {
     width: 100%;
     max-height: 65vh;
-    object-fit: contain;
+    aspect-ratio: 9 / 16;
     display: block;
+    border: none;
 }
 
 .solution-preview-card {
@@ -735,8 +736,9 @@ section {
 .presentation-player {
     width: 100%;
     max-height: 65vh;
-    object-fit: contain;
+    aspect-ratio: 9 / 16;
     display: block;
+    border: none;
 }
 
 /* 11. CASOS REAIS DE TRANSFORMAÇÃO (DEPOIMENTOS) */
