@@ -24,11 +24,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     
     <!-- CSS Estilos -->
-    <link rel="stylesheet" href="style.css?v=1.7">
+    <link rel="stylesheet" href="style.css?v=1.8">
     <link rel="canonical" href="https://www.visionariosdofuturo.com.br/">
     
     <!-- Scripts Otimizados (Non-blocking) -->
-    <script src="script.js?v=1.7" defer></script>
+    <script src="script.js?v=1.8" defer></script>
     
     <!-- Dados Estruturados -->
     <script type="application/ld+json">
@@ -128,14 +128,11 @@
             </div>
             <div class="hero-visual-vsl">
                 <div class="vsl-wrapper-box">
-                    <!-- Vídeo de VSL principal com Fachada Otimizada -->
-                    <div class="youtube-facade" data-video-id="q7mtEqTdYgY">
-                        <div class="facade-play-btn">
-                            <svg viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="currentColor" d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <!-- Vídeo de VSL principal (MP4 Local) -->
+                    <video class="vsl-player" playsinline controls preload="metadata">
+                        <source src="assets/Cópia de Video_1_para_maes_final.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
                 </div>
                 <div class="solution-preview-card">
                     <!-- Inserir width/height reais da imagem para evitar CLS -->
@@ -244,14 +241,10 @@
             <h2>Conheça a Metodologia Visionários por Dentro</h2>
             <p class="section-subtitle">Assista ao vídeo explicativo detalhado e entenda como funciona a dinâmica do Teste 360°.</p>
             <div class="video-container-box">
-                <!-- Vídeo explicativo da metodologia com Fachada Otimizada -->
-                <div class="youtube-facade" data-video-id="Aa3zeqJb96Y">
-                    <div class="facade-play-btn">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="currentColor" d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </div>
+                <video class="presentation-player" playsinline controls preload="metadata">
+                    <source src="assets/apresentacao-metodologia-visionarios.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
             </div>
         </div>
     </section>
