@@ -12,6 +12,31 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Executa no carregamento inicial caso a página comece scrollada
 
+    // === YouTube Facades Loader ===
+    const facades = document.querySelectorAll(".youtube-facade");
+    facades.forEach(facade => {
+        const videoId = facade.getAttribute("data-video-id");
+        if (videoId) {
+            // Define o thumbnail padrão de alta resolução do YouTube como background do container
+            facade.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/sddefault.jpg)`;
+            
+            // Substitui a fachada estática pelo iframe do player real ao clicar
+            facade.addEventListener("click", () => {
+                const iframe = document.createElement("iframe");
+                iframe.className = facade.classList.contains("presentation-player") ? "presentation-player" : "vsl-player";
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+                iframe.title = "YouTube Video Player";
+                iframe.frameBorder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                iframe.allowFullscreen = true;
+                
+                // Limpa o conteúdo da fachada (como o botão de play) e insere o iframe
+                facade.innerHTML = "";
+                facade.appendChild(iframe);
+            });
+        }
+    });
+
     // === 2. MENU MOBILE HAMBÚRGUER E GAVETA DE NAVEGAÇÃO ===
     const menuToggle = document.getElementById("menuToggle");
     const mobileNav = document.getElementById("mobileNav");
